@@ -21,7 +21,7 @@ class MyBot(commands.Bot):
         guild = discord.Object(id=GUILD_ID)
         await self.tree.sync(guild=guild)
 
-bot = MyBot(command_prefix="/", intents=intents)
+bot = MyBot(command_prefix="!", intents=intents)
 
 warnings = {}
 afk_users = {}
