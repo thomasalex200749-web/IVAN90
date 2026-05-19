@@ -18,8 +18,8 @@ intents = discord.Intents.all()
 
 class MyBot(commands.Bot):
     async def setup_hook(self):
-        guild = discord.Object(id=GUILD_ID)
-        await self.tree.sync(guild=guild)
+        await self.tree.sync()
+        print("✅ Slash commands synced!")
 
 bot = MyBot(command_prefix="!", intents=intents)
 
